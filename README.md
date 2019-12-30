@@ -51,6 +51,10 @@ entrysize=4
 
 #### 3.indexnum(index) 判斷總共有幾種index 根據個數創建需要的table 
     cache=[[None for i in range(entrysize+1)] for j in range(indexnum(index))] #Crate  cache table
+ Index   | Entry1  | Entry2 |Entry3 |Entry4
+ | ---------- | :-----------:  | :-----------: | :-----------:  | :-----------: |
+ Index1    |     |     |      |     |
+ Index2    |     |     |      |     | 
 
 #### 4.history() function會記錄前兩筆結果也就是Outcome
 ##### select() function 根據history選擇prediction要使用的2BC
