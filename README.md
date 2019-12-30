@@ -14,7 +14,7 @@ method='LRU'
 entrysize=4
 ```
 ### Input: 
-Eample :
+    Eample :
     E4 2C
     E2 2C
     E4 2C
