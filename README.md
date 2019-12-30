@@ -56,12 +56,15 @@ entrysize=4
  Index1    |     |     |      |     |
  Index2    |     |     |      |     | 
 
-#### 4.history() function會記錄前兩筆結果也就是Outcome
-##### select() function 根據history選擇prediction要使用的2BC
-##### prediction() function 根據選擇的2BC做預測 T or N
-##### changeREG() function 根據history以及Outcome去修改上次使用的2BC 
-    Selector=01,Pred=T,Outcome=T,Hit
-#### 5.Loop
-    for i in range (len(outcome))
-#### 6.Result:根據miss次數計算misspredicton
-    Misprediction=0.098039
+#### 4.Replace function會將Entry由右往左移並將新資料放置最後一格,最左邊則是最舊的資料,Setdata function則是會先判斷是否hit,如果hit回傳hit而LRU method則會在hit的同時把hit的資料放置最右邊
+    def dataReplace(index,tag):
+    def setdata(index,tag):
+
+#### 5.Loop重複step4 判斷是否hit,然後移動data
+    for i in range(len(tag)):
+#### 6.Result:根據hit次數計算hit rate
+    ----------------------------Round14----------------------------
+    [['2C', 'E2', 'E8', 'E2', 'E4'], ['4C', 'E2', None, None, None]]
+    Index=2C,Tag=E8,Hit
+    [['2C', 'E2', 'E2', 'E4', 'E8'], ['4C', 'E2', None, None, None]]
+    Hit Rate=0.571429
