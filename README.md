@@ -8,13 +8,27 @@
   * IDE:Pycharm 4.0 Python 3.7
   * Language:Python
 ### Parameter:
-Initial state:
+Initial:
 ```py    
-initialstate0='N'##Initial state
-initialstate1='N'#Initial state
+method='LRU'
+entrysize=4
 ```
 ### Input: 
-Eample : N,T,T,N,T,T,N,T,T,N,T,T
+Eample :
+    E4 2C
+    E2 2C
+    E4 2C
+    E3 2C
+    E5 2C
+    E4 2C
+    E2 2C
+    E2 4C
+    E4 2C
+    E8 2C
+    E2 2C
+    E2 4C
+    E4 2C
+    E8 2C
 ### Output: 
     -------------------Round51-------------------
     2BC State:WN,ST,ST,SN
