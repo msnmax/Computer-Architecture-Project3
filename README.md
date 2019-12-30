@@ -30,10 +30,15 @@ entrysize=4
     E4 2C
     E8 2C
 ### Output: 
-    -------------------Round51-------------------
-    2BC State:WN,ST,ST,SN
-    Selector=01,Pred=T,Outcome=T,Hit
-    Misprediction=0.098039
+    Method: LRU Entry: 4
+    ----------------------------Round1----------------------------
+    [['2C', None, None, None, None], ['4C', None, None, None, None]]
+    Index=2C,Tag=E4,Miss
+    ----------------------------Round14----------------------------
+    [['2C', 'E2', 'E8', 'E2', 'E4'], ['4C', 'E2', None, None, None]]
+    Index=2C,Tag=E8,Hit
+    [['2C', 'E2', 'E2', 'E4', 'E8'], ['4C', 'E2', None, None, None]]
+    Hit Rate=0.571429
 ### Step:
 #### 1.Set parameter: initial state
 #### 2.Read input file:T,N,T,N,T,N,T,N
