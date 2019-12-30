@@ -40,12 +40,18 @@ entrysize=4
     [['2C', 'E2', 'E2', 'E4', 'E8'], ['4C', 'E2', None, None, None]]
     Hit Rate=0.571429
 ### Step:
-#### 1.Set parameter: initial state
-#### 2.Read input file:T,N,T,N,T,N,T,N
-#### 3.REGstate function會顯示目前4個2BC的狀態
-    REGstate()
-    Example:
-    2BC State:WN,ST,ST,SN
+#### 1.Set parameter: entrysize //可設定entry個數 method//可設定為LRU or FIFO
+
+#### 2.Read input file:
+    Tag Index
+     E2   2C
+     E2   4C
+     E4   2C
+     E8   2C
+
+#### 3.indexnum(index) 判斷總共有幾種index 根據個數創建需要的table 
+    cache=[[None for i in range(entrysize+1)] for j in range(indexnum(index))] #Crate  cache table
+
 #### 4.history() function會記錄前兩筆結果也就是Outcome
 ##### select() function 根據history選擇prediction要使用的2BC
 ##### prediction() function 根據選擇的2BC做預測 T or N
